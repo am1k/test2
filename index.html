@@ -1,0 +1,87 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="select_ver1.js"></script>
+    <script src="onKeyPress.js"></script>
+    <script src="calculate.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left-sidebar">
+        </div>
+        <div id="main">
+            <div id="info">
+                    <select  id="List0" class="selected1" name="ololowa">
+                        <option value="selected-goods" selected="selected" > Выбор товара</option>
+                        <option value="3" > Двери </option>
+                        <option value="5" > Окна </option>
+                        <option value="8" > Столы </option>
+                    </select>
+                    <select  id="List1" class="selected1">
+                        <option value="selected-kind" selected="selected"> Выбор вида </option>
+                    </select>
+                    <select  id="List2" class="selected1">
+                        <option value="selected-skin" selected="selected"> Выбор шкурки </option>
+                    </select>
+                    <input onclick="viewdiv('select-color');"  type="submit" value="Выбрать" >
+                <p id="out"></p>
+            </div>
+            <div id="select-color">
+                <div class="button-color"><button onclick="viewdiv('color-select');">
+                    Кликните для выбора цвета
+                </button>
+                </div>
+                <div id="color-select" >
+                    <b>Выбор цветов:</b>
+                    <button class="color-select1"> </button>
+                    <button class="color-select2"> </button>
+                    <button class="color-select3"> </button>
+                    <button class="color-select4"> </button>
+                    <button class="color-select5"> </button>
+
+                </div>
+            </div>
+
+            <div class="size">
+
+                <div class="size-button">
+                    <input onclick="viewdiv('sizes');" type="submit" value="Введите размеры" >
+                </div>
+                <div id="sizes">
+                <div class="size-height">
+                    <form name="calculator"><b>Введите значение высоты: </b>
+                        <input type=text name="height" value="0" onkeypress="event.returnValue=(event.keyCode > 48) && (event.keyCode  < 57)" maxlength="6">
+                        <br>
+
+
+                        <b> Введите значение ширины: </b>
+                        <input type=text name="width" value="0" onkeypress="event.returnValue=(event.keyCode > 48) && (event.keyCode  < 57)" maxlength="6" >
+
+                        <ul>
+                            <li><label><input type="checkbox" name="option" class="check"  value="5">condition1</label></li>
+                            <li><label><input type="checkbox" class="check" value="1">condition2</label></li>
+                            <li><label><input type="checkbox" class="check" value="2">condition3</label></li>
+                            <li><label><input type="checkbox" class="check" value="3">condition4</label></li>
+                            <li><label><input type="checkbox" class="check" value="4">condition5</label></li>
+                        </ul>
+                    </form>
+                    <div id="sum1">
+                        <p>Итоговая сумма: </p>
+                    </div>
+
+                    <div id="checksum">
+                        <p>С дополнительными параметрами: </p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+    </div>
+    </div>
+
+</body>
+</html>
